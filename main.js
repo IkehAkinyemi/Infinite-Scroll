@@ -3,7 +3,6 @@ let firstUI = document.querySelector('.first');
 let secondUI = document.querySelector('.second');
 let thirdUI = document.querySelector('.third');
 let text = document.querySelector('.text');
-console.log(text.firstElementChild.textContent)
  
 let num = 0;
 let time = 1000;
