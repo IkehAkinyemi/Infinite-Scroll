@@ -1,0 +1,90 @@
+body {
+	margin: 0rem;
+}
+nav {
+	list-style-type: none;
+	margin-bottom: 3rem;
+	display: flex;
+	font-size: 2vh;
+	justify-content: space-between;
+	background: rgb(128, 81, 64);
+	color: whitesmoke;
+
+}
+
+.logo {
+	color: rosybrown;
+	text-align: center;
+	font-size: 30px;
+	margin-left: 1.5rem;
+}
+
+.logo-name {
+	margin-left: 1.5rem;
+	font-size: .8rem;
+	font-weight: bolder;
+}
+
+.home {
+	margin-right: 1rem;
+	margin-top: 1rem;
+	font-size: large;
+	border-bottom-color: whitesmoke;
+}
+
+.container {
+	text-align: center;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.first, .second, .third {
+	width: calc(100% - 2rem);
+	border: 1px solid teal;
+	margin-bottom: 2rem;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.text {
+	font-size: 3vw;
+	padding: .5rem;
+	box-shadow: 0px 10px 30px -15px rgba(48, 47, 47, 0.404);
+}
+
+.first img, .second img, .third img {
+	width: 100%;
+}
+
+@media screen and (min-width: 1023px) {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		flex-direction: row;
+		margin-top: -6rem;
+	}
+
+	.first, .second, .third {
+		margin: 0rem;
+	}
+
+	.first {
+		margin-bottom: 1rem;
+	}
+
+	.second {
+		margin-top: 6rem;
+		margin-bottom: 1rem;
+	}
+
+	.third {
+		margin-top: -1rem;
+	}
+
+	.text {
+		font-size: 1vw;
+	}
+}
