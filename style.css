@@ -1,6 +1,10 @@
+/*Disclaimer: This UI design was rushed over quickly because the project in
+totality was sudden and was just to quickly conclude it to build another project which was 
+big at this time*/
 body {
 	margin: 0rem;
 }
+/*UI design for the header and nav bar*/
 nav {
 	list-style-type: none;
 	margin-bottom: 3rem;
@@ -31,7 +35,7 @@ nav {
 	font-size: large;
 	border-bottom-color: whitesmoke;
 }
-
+/*UI style properties for the main part of the webpage*/
 .container {
 	text-align: center;
 	display: flex;
@@ -61,6 +65,45 @@ nav {
 	width: 100%;
 }
 
+/*UI styling for the loading effect at the bottom of the screen*/
+.loading {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border-top: 2px solid teal;
+	margin-left: 50%;
+	position: relative;
+	animation: a1 2s linear infinite;
+}
+
+.loading::before, .loading::after {
+	content: '';
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 0;
+	top: -2px;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+.loading::before {
+	border-top: 2px solid rgb(128, 81, 64);
+	transform: rotate(120deg);
+}
+
+.loading::after {
+	border-top: 2px solid #3498db;
+	transform: rotate(240deg);
+}
+
+@keyframes a1 {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/*Made responsive changes for what is considered desktop view.*/
 @media screen and (min-width: 1023px) {
 	.container {
 		display: grid;
@@ -75,6 +118,7 @@ nav {
 
 	.first {
 		margin-bottom: 1rem;
+		margin-left: .4rem;
 	}
 
 	.second {
@@ -89,4 +133,8 @@ nav {
 	.text {
 		font-size: 1vw;
 	}
-}
+
+	.loading {
+		margin-left: 50%;
+	}
+}	
